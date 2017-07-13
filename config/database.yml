@@ -3,7 +3,7 @@ default: &default
   pool: 5
   database: adm
   host: localhost
-  username: postgres
+  username: indeva
   
 development:
   <<: *default
