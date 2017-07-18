@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :description %>
+  <div class="form-group">
+    <%= form.label :description, value: 'Descrição' %>
     <%= form.text_area :description, id: :ticket_description %>
   </div>
 
-  <div class="field">
-    <%= form.label :customer_id %>
+  <div class="form-group">
+    <%= form.label :customer_id, value: 'Cliente' %>
     <%= form.collection_select :customer_id, Customer.all, :id, :name, {}, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :ticket_type_id %>
+  <div class="form-group">
+    <%= form.label :ticket_type_id, value: 'Tipo de ticket' %>
     <%= form.collection_select :ticket_type_id, TicketType.all, :id, :name, {}, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit 'Salvar', class: "btn btn-default"  %>
   </div>
 <% end %>

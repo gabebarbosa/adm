@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @ticket.description %>
+  <strong>Descricao:</strong>
+  <%= simple_format(@ticket.description) %>
 </p>
 
 <p>
-  <strong>Customer:</strong>
-  <%= @ticket.customer_id %>
+  <strong>Cliente:</strong>
+  <%= @ticket.customer.name %>
 </p>
 
 <p>
-  <strong>Ticket type:</strong>
-  <%= @ticket.ticket_type_id %>
+  <strong>Tipo de ticket:</strong>
+  <%= @ticket.ticket_type.name %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @ticket.user_id %>
+  <strong>Usuario:</strong>
+  <%= @ticket.user.email %>
 </p>
 
-<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
-<%= link_to 'Back', tickets_path %>
+<%= link_to 'Editar', edit_ticket_path(@ticket) %> |
+<%= link_to 'voltar', tickets_path %>
