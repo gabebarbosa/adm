@@ -26,11 +26,6 @@
     <%= form.collection_select :ticket_type_id, TicketType.all, :id, :name, {}, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :ticket_user_id %>
-  </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
