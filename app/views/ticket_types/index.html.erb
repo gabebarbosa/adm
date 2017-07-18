@@ -1,4 +1,15 @@
-<h1>Ticket Types</h1>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-3">
+        <h4>Tipos de tickets</h4>
+      </div>
+      <div align="right" class="col-md-9">
+        <%= link_to "Novo tipo de ticket", new_ticket_type_path, class: "btn btn-default" %> 
+      </div>
+    </div>
+  </div>
+</div>
 
 <table>
   <thead>
@@ -19,7 +30,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Ticket Type', new_ticket_type_path %>

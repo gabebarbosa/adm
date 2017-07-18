@@ -1,4 +1,15 @@
-<h1>Tickets</h1>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-3">
+        <h4>Tickets</h4>
+      </div>
+      <div align="right" class="col-md-9">
+        <%= link_to "Novo ticket", new_ticket_path, class: "btn btn-default" %> 
+      </div>
+    </div>
+  </div>
+</div>
 
 <table class="table table-condensed table-hover">
   <thead>
@@ -23,7 +34,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Novo Ticket', new_ticket_path %>
