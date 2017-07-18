@@ -11,7 +11,7 @@
   </div>
 </div>
 
-<table class="table table-condensed table-hover">
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>Nome</th>
@@ -25,7 +25,6 @@
         <td><%= customer.name %></td>
         <td><%= link_to 'Ver', customer %></td>
         <td><%= link_to 'Editar', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Deletar', customer, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -41,13 +41,13 @@ class TicketTypesController < ApplicationController
     end
   end
 
-  def destroy
-    @ticket_type.destroy
-    respond_to do |format|
-      format.html { redirect_to ticket_types_url, notice: 'Tipo de ticket apagado com sucesso.' }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @ticket_type.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to ticket_types_url, notice: 'Tipo de ticket apagado com sucesso.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     def set_ticket_type
