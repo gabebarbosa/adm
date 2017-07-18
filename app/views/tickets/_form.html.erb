@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= form.label :customer_id %>
-    <%= form.number_field :customer_id, id: :ticket_customer_id %>
+    <%= form.collection_select :customer_id, Customer.all, :id, :name, {}, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :ticket_type_id %>
-    <%= form.number_field :ticket_type_id, id: :ticket_ticket_type_id %>
+    <%= form.collection_select :ticket_type_id, TicketType.all, :id, :name, {}, class: "form-control" %>
   </div>
 
   <div class="field">

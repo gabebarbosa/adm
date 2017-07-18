@@ -20,7 +20,7 @@ class TicketTypesController < ApplicationController
 
     respond_to do |format|
       if @ticket_type.save
-        format.html { redirect_to @ticket_type, notice: 'Ticket type was successfully created.' }
+        format.html { redirect_to @ticket_type, notice: 'Tipo de ticket criado com sucesso.' }
         format.json { render :show, status: :created, location: @ticket_type }
       else
         format.html { render :new }
@@ -32,7 +32,7 @@ class TicketTypesController < ApplicationController
   def update
     respond_to do |format|
       if @ticket_type.update(ticket_type_params)
-        format.html { redirect_to @ticket_type, notice: 'Ticket type was successfully updated.' }
+        format.html { redirect_to @ticket_type, notice: 'Tipo de ticket atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @ticket_type }
       else
         format.html { render :edit }
@@ -44,7 +44,7 @@ class TicketTypesController < ApplicationController
   def destroy
     @ticket_type.destroy
     respond_to do |format|
-      format.html { redirect_to ticket_types_url, notice: 'Ticket type was successfully destroyed.' }
+      format.html { redirect_to ticket_types_url, notice: 'Tipo de ticket apagado com sucesso.' }
       format.json { head :no_content }
     end
   end
