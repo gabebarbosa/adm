@@ -14,8 +14,13 @@
 </p>
 
 <p>
-  <strong>Usuario:</strong>
-  <%= @ticket.user.email %>
+  <strong>Criador:</strong>
+  <%= @ticket.creator.email %>
+</p>
+
+<p>
+  <strong>Destinatário:</strong>
+  <%= @ticket.recipient.email %>
 </p>
 
 <%= link_to 'Editar', edit_ticket_path(@ticket) %> |
