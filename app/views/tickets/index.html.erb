@@ -26,7 +26,7 @@
   <tbody>
     <% @tickets.each do |ticket| %>
       <tr>
-        <td><%= ticket.open == true ? 'Aberto' : 'Fechado' %></td>
+        <td><%= ticket_status(ticket) %></td>
         <td><%= ticket.customer.name %></td>
         <td><%= ticket.ticket_type.name %></td>
         <td><%= ticket.creator.email %></td>
