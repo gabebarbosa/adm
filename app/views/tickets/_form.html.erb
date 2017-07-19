@@ -27,6 +27,11 @@
   </div>
 
   <div class="form-group">
+    <%= form.label :ticket_recipient_id, value: 'Destinatario' %>
+    <%= form.collection_select :ticket_recipient_id, User.all, :id, :email, {}, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= form.submit 'Salvar', class: "btn btn-default"  %>
   </div>
 <% end %>
