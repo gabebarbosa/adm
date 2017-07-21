@@ -11,31 +11,24 @@
   </div>
 </div>
 
-<table class="table table-condensed table-hover">
-  <thead>
-    <tr>
-      <th>Status</th>
-      <th>Cliente</th>
-      <th>Tipo de ticket</th>
-      <th>Criador</th>
-      <th>Destinatario</th>
-      <th colspan="1"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tickets.each do |ticket| %>
-      <tr>
-        <td><%= ticket_status(ticket) %></td>
-        <td><%= ticket.customer.name %></td>
-        <td><%= ticket.ticket_type.name %></td>
-        <td><%= ticket.creator.email %></td>
-        <td><%= ticket.recipient.email %></td>
-        <td align="right">
-          <%= link_to 'Ver', ticket, class: 'btn btn-info btn-xs' %>
-          <%= link_to 'Editar', edit_ticket_path(ticket), class: 'btn btn-success btn-xs' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <% @tickets.each do |ticket| %>
+  <div class="col-md-3">
+    <ul class="small list-group" >
+      <li class="list-group-item" >
+        <%= ticket_status(ticket) %> - 
+        <%= ticket.ticket_type.name %><br>   
+      </li>
+      <li class="list-group-item">
+        Cliente: <%= ticket.customer.name %><br>
+        De: <%= ticket.creator.email %><br>
+        Para: <%= ticket.recipient.email %>        
+      </li>
+      <li class="list-group-item">
+        <%= link_to 'Ver', ticket, class: 'btn btn-info btn-xs' %>
+        <%= link_to 'Editar', edit_ticket_path(ticket), class: 'btn btn-success btn-xs' %>
+      </li>
+    </ul>
+  </div>
+  <% end %>
+</div>
